@@ -8,22 +8,6 @@ import org.hibernate.Transaction;
 
 
 public class Main {
-	
-	
-//		public static void main()
-//         EventQueue.invokeLater(new Runnable() {
-// 			public void run() {
-// 				try {
-// 					
-// 					frame.setVisible(true);
-// 				} catch (Exception e) {
-// 					e.printStackTrace();
-// 				}
-// 			}
-// 		});
-//		}
-	
-	
 	public static void printNguoiDung(Session session)
 	{
 		 List<NguoiDung> list = session.createQuery("From NguoiDung",NguoiDung.class).list();
@@ -32,28 +16,8 @@ public class Main {
       	   System.out.println(a.toString());
          }
 	}
-//	public static void khachha() {
-//		khachha frame = new khachha();
-//		frame.setVisible(true);
-//	}
-	
 	public static void main(String []args) {
 		Controller controller = new Controller();
 		controller.start();
-//       try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-//           transaction = session.beginTransaction();
-//           printNguoiDung(session);
-//       		
-//         
-//    	
-//
-//           transaction.commit();
-//       } catch (Exception e) {
-//           e.printStackTrace();
-//           if (transaction != null) {
-//               transaction.rollback();
-//           }
-//       }
-//       HibernateUtil.shutdown();
 	}
 }
